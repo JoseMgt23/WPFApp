@@ -20,5 +20,16 @@ namespace WPFApp
         {
             InitializeComponent();
         }
+
+        void CreateTask()
+        {
+            Task T;
+            
+        }
+
+        void ShowMesage()
+        {
+            MessageBox.Show("Ejecucion el metodo ShowMessage");
+        }
     }
 }

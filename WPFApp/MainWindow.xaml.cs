@@ -34,10 +34,13 @@ namespace WPFApp
             });
 
             Task T3 = new Task(
-                delegate 
-            {
-                ShowMesage(); 
-            });
+                () => ShowMesage());
+                
+            
+            //Expresion Lambda:
+            //(Parametros de entrada) => Expresion 
+            // () =>  Expresion
+            //El operador lambda (=>) se lee como "va hacia"
 
             
         }

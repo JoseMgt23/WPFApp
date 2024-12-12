@@ -21,6 +21,14 @@ namespace WPFApp
             InitializeComponent();
         }
 
+
+        void AddMessage(string message)
+        {
+            Messages.Content +=
+                $"Mensaje: {message}, " +
+                $"Hilo actual: {Thread.CurrentThread.ManagedThreadId}\n";
+        }
+
         void CreateTask()
         {
             Task T;
@@ -43,7 +51,7 @@ namespace WPFApp
             //El operador lambda (=>) se lee como "va hacia"
 
             Task T4 = new Task( () => MessageBox.Show("Ejecucion la tarea 4"));
-            DateTime CurrrentDate = DateTime.Today;
+            
             Task T5 = new Task(() => 
             {
                 DateTime CurrentDate = DateTime.Today;

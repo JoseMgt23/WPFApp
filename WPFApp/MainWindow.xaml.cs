@@ -19,6 +19,7 @@ namespace WPFApp
         public MainWindow()
         {
             InitializeComponent();
+            CreateTask();
         }
 
 
@@ -61,7 +62,10 @@ namespace WPFApp
 
             Task T6 = new Task((message) =>
             MessageBox.Show(message.ToString()), "Expresion lambda con parametros.");
-            
+
+            Task T7 = new Task(() => AddMessage("Ejecucion la tarea."));
+            T7.Start();
+            AddMessage("En el Hilo principal");
         }
 
         void ShowMesage()

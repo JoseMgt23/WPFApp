@@ -33,6 +33,12 @@ namespace WPFApp
                 MessageBox.Show("Ejecucion una tarea en un metodo anonimo");
             });
 
+            Task T3 = new Task(
+                delegate 
+            {
+                ShowMesage(); 
+            });
+
             
         }
 

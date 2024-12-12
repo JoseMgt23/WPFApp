@@ -24,6 +24,10 @@ namespace WPFApp
         void CreateTask()
         {
             Task T;
+            // ¿Que es un delegado? Apuntador a funciones
+            Action Code = new Action(ShowMesage);
+            T = new Task(Code);
+
             
         }
 

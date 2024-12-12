@@ -42,6 +42,13 @@ namespace WPFApp
             // () =>  Expresion
             //El operador lambda (=>) se lee como "va hacia"
 
+            Task T4 = new Task( () => MessageBox.Show("Ejecucion la tarea 4"));
+            Task T5 = new Task(() => 
+            {
+                DateTime CurrentDate = DateTime.Today;
+                DateTime StarDate = CurrentDate.AddDays(30);
+                MessageBox.Show($"Tare 5. Fecha Calculada: {StarDate}");
+            });
             
         }
 

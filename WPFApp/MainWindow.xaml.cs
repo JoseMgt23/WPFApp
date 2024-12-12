@@ -32,7 +32,7 @@ namespace WPFApp
             {
                 MessageBox.Show("Ejecucion una tarea en un metodo anonimo");
             });
-
+            Task T3A = new Task(ShowMesage);
             Task T3 = new Task(
                 () => ShowMesage());
                 
@@ -43,12 +43,16 @@ namespace WPFApp
             //El operador lambda (=>) se lee como "va hacia"
 
             Task T4 = new Task( () => MessageBox.Show("Ejecucion la tarea 4"));
+            DateTime CurrrentDate = DateTime.Today;
             Task T5 = new Task(() => 
             {
                 DateTime CurrentDate = DateTime.Today;
                 DateTime StarDate = CurrentDate.AddDays(30);
                 MessageBox.Show($"Tare 5. Fecha Calculada: {StarDate}");
             });
+
+            Task T6 = new Task((message) =>
+            MessageBox.Show(message.ToString()), "Expresion lambda con parametros.");
             
         }
 

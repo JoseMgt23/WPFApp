@@ -25,6 +25,7 @@ namespace WPFApp
 
         void AddMessage(string message)
         {
+            int CurrrentThreadId = Thread.CurrentThread.ManagedThreadId;
             this.Dispatcher.Invoke(() =>
             {
                 Messages.Content +=
